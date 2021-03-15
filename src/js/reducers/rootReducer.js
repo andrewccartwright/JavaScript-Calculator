@@ -16,7 +16,6 @@ const initialState = {
 export default function rootReducer(state = initialState, action) {
   switch( action.type ) {
     case UPDATE:
-      document.getElementById('test').innerHTML = state.history;
       if((state.currVal.includes('.') && action.payload.val === '.') || state.currVal.length > 7){
         return {
           ...state
